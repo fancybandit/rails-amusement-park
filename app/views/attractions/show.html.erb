@@ -1,0 +1,8 @@
+<%= button_to "Go on this ride", user_path(current_user.id), params: {ride: @attraction.name} %>
+<%= link_to "Edit Attraction", edit_attraction_path(@attraction.id) if current_user.admin %>
+
+<h1><%= @attraction.name %></h1>
+<h3><%= @attraction.tickets %></h3>
+<h3><%= @attraction.nausea_rating %></h3>
+<h3><%= @attraction.happiness_rating %></h3>
+<h3><%= @attraction.min_height %></h3>

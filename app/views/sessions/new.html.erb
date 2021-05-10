@@ -1,0 +1,12 @@
+<h1>Login</h1>
+
+<%= form_for :user do |f| %>
+
+    <%= f.label :user_id, 'user_name' %>
+    <%= f.collection_select :user_id, User.all, :id, :name %><br>
+
+    <%= f.label :password, "password" %>
+    <%= f.password_field :password, required: true %><br>
+
+    <%= f.submit "Sign In" %>
+<% end %>

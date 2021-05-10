@@ -1,0 +1,14 @@
+<% if @user.admin %>
+    <h1>ADMIN</h1><br>
+<% end %>
+
+<h1><%= @user.name %></h1>
+<h3><%= @user.height %></h3>
+<h4>Mood</h4>
+<h3><%= "happy" if @user.happiness.to_i > 1 %></h3>
+<h3><%= "sad" if @user.happiness.to_i <= 1 %></h3>
+<h3><%= @user.nausea %></h3>
+<h3>Tickets: <%= @user.tickets %></h3>
+
+<%= link_to "See attractions", attractions_path %><br>
+<%= link_to "Log Out", signout_path, method: :post %>
